@@ -11,7 +11,7 @@ form.addEventListener("submit", function (e) {
   console.log({ data, formData });
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbzMZmaQ1I4GufWkzh1k7DzqqMXs13wX_9oGep7VRquWzXyt-SY2sQGDHFSgSOd41dvYwg/exec",
+    "https://script.google.com/macros/s/AKfycbxAmEIkFeBzt6A8Iuj43wTfC-_DNCMxGGHTtzJFnDH-z48SUk0HxIIJqJ5QZBb0jQ4X/exec",
     {
       method: "POST",
       body: data,
@@ -19,7 +19,6 @@ form.addEventListener("submit", function (e) {
   )
     .then((response) => response.text())
     .then((result) => {
-      alert(result); // Show success message
       form.reset(); // Optionally reset the form after submission
     })
     .catch((error) => console.error("Error:", error));
